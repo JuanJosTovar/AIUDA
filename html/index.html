@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Work Fast</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../images/logo.jpeg" alt="">
+        </header>
+        <article class="todo">
+            <section class="tareas">
+                <h2>Agregar Tarea</h2>
+                <div>
+                    <input type="text" id="taskInput" placeholder="Nueva tarea">
+                    <button class="btn" onclick="addTask()"><img src="../images/plus-circle-dotted.svg" alt="Agregar tarea"></button>
+                    <div class="tareas-container">
+                    </div>
+                </div>
+            </section>
+            <section class="tableros" class="container"> 
+                <div class="tablero" id="porHacer" ondrop="drop(event, 'porHacer')" ondragover="allowDrop(event)">
+                    <span><h2 class="titulo">Por hacer</h2></span>
+                </div>
+                <div class="tablero" id="enProceso" ondrop="drop(event, 'enProceso')" ondragover="allowDrop(event)">
+                    <span> <h2 class="titulo">En proceso</h2>
+                    </span>
+                </div>
+                <div class="tablero" id="terminado" ondrop="drop(event, 'terminado')" ondragover="allowDrop(event)"> 
+                    <span><h2 class="titulo">Terminado</h2>
+                    </span>
+                </div>
+            </section>
+        </article>
+    <script src="../js/editar.js"></script>
+</body>
+</html>
